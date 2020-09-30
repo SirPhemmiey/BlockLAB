@@ -1,3 +1,22 @@
 To run:
 %cd src
-%python webstreaming.py --ip 0.0.0.0 --port 8000
+%python main.py --ip 0.0.0.0 --port 8000
+
+Arguments to use:
+ap.add_argument("-i", "--input", type=str, default="",
+                help="path to (optional) input video file")
+ap.add_argument("-l", "--location", type=str, default="",
+                help="geo location of video feed")
+ap.add_argument("-o", "--output", type=str, default="",
+                help="path to (optional) output video file")
+ap.add_argument("-d", "--display", type=int, default=1,
+                help="whether or not output frame should be displayed")
+ap.add_argument("-w", "--web", type=int, default=1,
+                help="whether to start the program as a flask web app")
+ap.add_argument("-f", "--frame_rate", type=int, default=60,
+                help="the framerate of the video")
+ap.add_argument("-ip", "--ip", type=str, default="0.0.0.0",
+                help="the ip address")
+ap.add_argument("-p", "--port", type=str, default="8000",
+                help="the port number")
+ 
